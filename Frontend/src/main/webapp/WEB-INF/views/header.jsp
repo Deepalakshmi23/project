@@ -2,11 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false"%>
-
-
-
-
+<%@ page isELIgnored="false"%><!-- wow -->
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +12,17 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Insert title here</title>
+	<%-- <%@ page isELIgnored="False" %> --%>
+	<!-- Angular JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+	<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+	
+	<title>Insert title here</title>
 </head>
+
 <body>
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
@@ -71,12 +76,13 @@
 				<li><button class="btn btn-default">sign out</button></li>
  -->
 			<ul class ="nav navbar-nav navbar-right">
-				<li><form class="input-group">
+				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search"/>
-					<button class="btn btn-default" type="submit">
-						<i class="glyphicon glyphicon-search"></i>
+					  <button class="btn btn-default" type="submit"> 
+						 <div class="glyphicon glyphicon-search"> </div>
 					</button>
-				</form></li>
+					</div>
+				<!-- </form> -->
 			</ul>
 		</div>
 	</div>

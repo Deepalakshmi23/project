@@ -15,7 +15,26 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Angular JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+	<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+	
 
+<script>
+	$(document).ready(function() {
+		var searchCondition;
+		$('.table').DataTable({
+			"lengthMenu" : [ [ 3, 5, 7, -1 ],[3, 5, 7, "All"] ],
+			"oSearch" : {"sSearch" : searchCondition
+			}
+
+		})
+
+	});
+</script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -24,10 +43,12 @@
 	<div class="Container">
 		<table class="table table-striped">
 			<thead>
-				<tr>
+				<tr><th>image</th>
 					<th>productName</th>
 					<th>price</th>
 					<th>category</th>
+					<th>Action</th>
+
 
 
 				</tr>
@@ -35,12 +56,14 @@
 			<tbody>
 				<c:forEach items="${pro1}" var="p">
 					<tr>
+						<c:url value="/resource/${p.id}.png" var="imageUrl"></c:url>
 						<c:url value="/all/product/viewproduct/${p.id}" var="viewUrl"></c:url>
 
 
-
+						<td><img src="${imageUrl }" height="50" width="50"></td>
 						<td><a href="${viewUrl }">${p.productName }</a></td>
-					   <td>${p.price }</td><td>${p.category.id }</td> 
+						<td>${p.price }</td>
+						<td>${p.category.categoryname }</td>
 						<td><a href="${viewUrl}"><span
 								class="glyphicon glyphicon-info-sign"></span></a> <c:url
 								value="/admin/product/deleteproduct/${p.id}" var="deleteUrl"></c:url>

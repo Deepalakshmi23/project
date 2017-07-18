@@ -10,8 +10,8 @@ import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 
 import org.hibernate.validator.constraints.NotEmpty;
-/*import org.springframework.web.multipart.MultipartFile;
-*/
+import org.springframework.web.multipart.MultipartFile;
+
 
 @Entity
 public class Product {
@@ -26,8 +26,8 @@ private double price;
 private int quantity;
 @NotEmpty(message="Productdescription is a empty")
 private String description;
-/*@Transient
-private MultipartFile image;*/
+@Transient
+private MultipartFile image;
 @ManyToOne
 @JoinColumn(name="cid")
 private Category category;
@@ -36,6 +36,12 @@ public Category getCategory() {
 }
 public void setCategory(Category category) {
 	this.category = category;
+}
+public MultipartFile getImage() {
+	return image;
+}
+public void setImage(MultipartFile image) {
+	this.image = image;
 }
 public int getId() {
 	return id;

@@ -28,7 +28,7 @@
 			</ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img class="first-slide home-image" src="resourse/9.jpg"
+					<img class="first-slide home-image" src="resource/9.jpg"
 						style="width: 1500px; height: 300px" alt="first slide">
 					<div class="container">
 						<div class="carousel-caption">
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="second-slide home-image" src="resourse/3.jpg"
+					<img class="second-slide home-image" src="resource/3.jpg"
 						style="width: 1500px; height: 300px" alt="Second slide">
 					<div class="container">
 						<div class="carousel-caption">
@@ -49,7 +49,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="third-slide home-image " src="resourse/4.jpg"
+					<img class="third-slide home-image " src="resource/4.jpg"
 						style="width: 1500px; height: 300px" alt="Third slide">
 					<div class="container">
 						<div class="carousel-caption">
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="forth-slide home-image " src="resourse/1.jpg"
+					<img class="forth-slide home-image " src="resource/1.jpg"
 						style="width: 1500px; height: 300px" alt="forth slide">
 					<div class="container">
 						<div class="carousel-caption">
@@ -70,7 +70,7 @@
 				</div>
 			
 			<div class="item">
-				<img class="five-slide home-image " src="resourse/5.jpg"
+				<img class="five-slide home-image " src="resource/5.jpg"
 					style="width: 1500px; height: 300px" alt="forth slide">
 				<div class="container">
 					<div class="carousel-caption">

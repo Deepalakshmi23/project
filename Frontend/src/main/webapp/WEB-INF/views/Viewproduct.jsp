@@ -22,7 +22,12 @@
 	<b>Detail about view product</b>
 	<div class="Container">
 	<table class="table table-striped">
+	<tr><td><c:url value="/resource/${pro1.id}.png" var="imageUrl"></c:url></td>
+	<td><img src="${imageUrl }"  height="100" width="150"></td>
+	</tr>
 		<tr>
+		
+		
 			<td>ProductName:</td>
 			<td>${pro1.productName}</td>
 		</tr>
@@ -39,6 +44,6 @@
 			<td>${pro1.description}</td>
 		</tr>
 	</table>
-
+</div>
 </body>
 </html>

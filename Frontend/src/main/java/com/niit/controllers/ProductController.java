@@ -2,6 +2,10 @@ package com.niit.controllers;
 
 
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -13,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.niit.model.Category;
 import com.niit.model.Product;
@@ -51,6 +56,19 @@ public String saveproduct(@Valid @ModelAttribute (name="product") Product produc
 	}
 	
 	productservice.saveproduct(product);
+	MultipartFile image=product.getImage();
+    Path path= Paths.get("F:\\nii java\\PROJECT\\Frontend\\src\\main\\webapp\\WEB-INF\\resource\\"+product.getId()+".png");
+	
+		try {
+			image.transferTo(new File(path.toString()));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+			
 	return "redirect:/all/product/productlist";
 }
 @RequestMapping("/all/product/productlist")
